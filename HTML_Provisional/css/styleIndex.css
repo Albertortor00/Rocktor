@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  background-color: #dae1ee;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-container{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  margin-right: 30px;
+}
+
+img.search-img{
+  width: auto;
+  height: 18px;
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
+input[name="searchInput"]{
+  padding: 10px 10px;
+  width: 80%;
+  border: none;
+  outline: none;
+}
+
+input[name="searchInput"]:active{
+  border: none;
+  outline: none;
+}
+
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 20px;
+  padding-right: 30px;
+}
+
+.btn-signin{
+  border: solid 2px transparent;
+  border-radius: 5px;
+  height: fit-content;
+  background-color: #7c9bc1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all ease 0.4s;
+}
+
+.btn-signup{
+  border: solid 2px transparent;
+  border-radius: 5px;
+  height: fit-content;
+  background-color: #5d985e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all ease 0.4s;
+}
+
+.btn-signin:hover, .btn-signup:hover{
+  opacity: 0.9;
+  transition: all ease 0.4s;
+}
+
+.btn-signin:hover{
+  background-color: #3c71bc;
+  border-color: #376db4;
+  box-shadow: 0px 0px 8px 0px #264667;
+}
+
+.btn-signup:hover{
+  background-color: #4a9c42;
+  border-color: #409640;
+  box-shadow: 0px 0px 8px 0px #1f751f;
+}
+
+img.logo {
+  width: auto;
+  height: 80px;
+  margin: 20px;
+}
+
+.nav-menu ul {
+  padding: 5px 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  gap: 50px;
+  background-color: #dae1ee;
+  transition: all ease 0.2s;
+}
+
+.nav-menu ul:hover {
+  background-color: #243869;
+}
+
+.nav-menu ul li:nth-of-type(1) {
+    margin-left: 20px;
+}
+
+.nav-menu ul li {
+  font-size: large;
+  color: #c1c7d6;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.nav-menu ul li:hover {
+  font-size: large;
+  color: #ffffff;
+}
