@@ -1,4 +1,4 @@
 En este fichero se organizarán todas las instrucciones para tener un control del código de mi proyecto, 
 ahora esto es una línea de relleno para que pueda tener un archivo inicial en mi proyecto, en este caso en mi README.txt
 
-Este proyecto será desarrollado en tecnología JAVA, desde el IDE Eclipse EE, y con el patrón de diseño MVC
+Este proyecto será desarrollado en tecnología JAVA, desde el IDE IntelliJ Idea, y con el patrón de diseño MVC.
