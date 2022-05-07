@@ -18,8 +18,16 @@
             </a>
             <div class="right-container">
                 <div class="buttons">
-                    <div class="btn-signin">Sign In</div>
-                    <div class="btn-signup">Sign Up</div>
+                    <label for="btn-modal-signIn">
+                        <div class="btn-signIn">
+                            Sign In
+                        </div>
+                    </label>
+                    <label for="btn-modal-signUp">
+                        <div class="btn-signUp">
+                            Sign Up
+                        </div>
+                    </label>
                 </div>
                 <div class="search-container">
                     <img src="img/search.png" alt="buscar" class="search-img">
@@ -42,6 +50,42 @@
             </ul>
         </nav>
     </header>
+
+    <section class="principal-section">
+        <img src="img/wallpapers/img-1.JPG" alt="background">
+    </section>
+
+    <!---------------------------- Estructura de Modal SignUp ---------------------------->
+    <input type="checkbox" id="btn-modal-signUp">
+    <div class="modal-signUp-container">
+        <div class="modal-signUp">
+            <h2>¡Bienvenido Sign Up!</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, culpa.</p>
+            <div class="btn-close">
+                <label for="btn-modal-signUp">
+                    <img src="img/close-modal.png" alt="cerrar" class="img-close-modal">
+                </label>
+            </div>
+        </div>
+        <label for="btn-modal-signUp" class="invisible-label-close-modal"></label>
+    </div>
+    <!-- ------------------------------------------------------------------------------ -->
+
+    <!---------------------------- Estructura de Modal SignIn ---------------------------->
+    <input type="checkbox" id="btn-modal-signIn">
+    <div class="modal-signIn-container">
+        <div class="modal-signIn">
+            <h2>¡Bienvenido Sign In!</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, culpa.</p>
+            <div class="btn-close">
+                <label for="btn-modal-signIn">
+                    <img src="img/close-modal.png" alt="cerrar" class="img-close-modal">
+                </label>
+            </div>
+        </div>
+        <label for="btn-modal-signIn" class="invisible-label-close-modal"></label>
+    </div>
+    <!-- ------------------------------------------------------------------------------ -->
 </body>
 
 </html>
