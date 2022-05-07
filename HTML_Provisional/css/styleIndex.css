@@ -57,7 +57,7 @@ input[name="searchInput"]:active{
   justify-content: right;
   align-items: center;
   gap: 20px;
-  padding-right: 30px;
+  margin-right: 30px;
 }
 
 .btn-signin{
