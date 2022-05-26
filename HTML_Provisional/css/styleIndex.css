@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background: url("../img/wallpapers/background.webp") center center fixed;
+}
+
 header {
   background-color: #dae1ee;
   height: 100%;
@@ -52,7 +56,7 @@ input[name="searchInput"]:active {
   outline: none;
 }
 
-.buttons{
+.buttons {
   width: 100%;
   display: flex;
   justify-content: right;
@@ -60,7 +64,7 @@ input[name="searchInput"]:active {
   gap: 20px;
 }
 
-.btn-signIn{
+.btn-signIn {
   border: solid 2px transparent;
   border-radius: 5px;
   height: fit-content;
@@ -74,7 +78,7 @@ input[name="searchInput"]:active {
   transition: all ease 0.4s;
 }
 
-.btn-signUp{
+.btn-signUp {
   border: solid 2px transparent;
   border-radius: 5px;
   height: fit-content;
@@ -208,8 +212,9 @@ disminuir código, además de evitar redundancia en el mismo
 .modal-signUp,
 .modal-signIn {
   border-radius: 10px;
+  min-width: 400px;
   background-color: #ffffff;
-  padding: 50px 20px;
+  padding: 30px 20px;
   position: relative;
 }
 
@@ -240,6 +245,64 @@ disminuir código, además de evitar redundancia en el mismo
 #btn-modal-signIn:checked ~ .modal-signIn-container .modal-signIn {
   animation-name: showModal;
   animation-duration: 0.8s;
+}
+
+.modal-form-title {
+  padding-bottom: 2vh;
+  color: #303030;
+  padding-left: 20px;
+}
+
+.form-signUp,
+.form-signIn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.input-form,
+.input-form:active {
+  outline: none;
+  width: 90%;
+  cursor: auto;
+  border: none;
+  background-color: #80808027;
+  padding: 8px;
+}
+
+.input-form:focus {
+  background-color: #aaaaaa27;
+}
+
+.form-signUp input[type="submit"].input-form {
+  background-color: #5d985e;
+  color: white;
+  cursor: pointer;
+}
+
+.form-signUp input[type="submit"].input-form:hover {
+  background-color: #6dad6e;
+  color: white;
+}
+
+.form-signIn input[type="submit"].input-form {
+  background-color: #5d7798;
+  color: white;
+  cursor: pointer;
+}
+
+.form-signIn input[type="submit"].input-form:hover {
+  background-color: #6d8bad;
+  color: white;
+}
+
+.personal-hr {
+  width: 98%;
+  height: 2px;
+  background-color: #00000035;
+  border: none;
 }
 
 @keyframes showModal {
@@ -336,16 +399,51 @@ disminuir código, además de evitar redundancia en el mismo
     margin-right: 20px;
   }
 
-  .btn-signIn,.btn-signUp{
+  .btn-signIn,
+  .btn-signUp {
+    z-index: 100;
     position: fixed;
     bottom: 8vh;
     right: 20px;
   }
 
-  .btn-signIn{
+  .btn-signIn {
     position: fixed;
     bottom: 8vh;
     right: 150px;
+  }
+
+  .modal-signUp,
+  .modal-signIn {
+    border-radius: 10px;
+    min-width: 400px;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    top: -80px;
+    position: relative;
+  }
+
+  .menu-responsive {
+    animation-name: showMenuModal;
+    animation-duration: 0.8s;
+  }
+
+  @keyframes showModal {
+    0% {
+      top: -53vh;
+    }
+    100% {
+      top: -80px;
+    }
+  }
+
+  @keyframes showMenuModal {
+    0% {
+      top: -53vh;
+    }
+    100% {
+      top: 0px;
+    }
   }
 }
 
