@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../img/wallpapers/background.webp") center center fixed;
+}
+
+header {
+    background-color: #dae1ee;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    margin-right: 40px;
+}
+
+img.search-img {
+    width: auto;
+    height: 18px;
+    margin-right: 10px;
+    opacity: 0.6;
+}
+
+input[name="searchInput"] {
+    padding: 10px 10px;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+input[name="searchInput"]:active {
+    border: none;
+    outline: none;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-signIn {
+    border: solid 2px transparent;
+    border-radius: 5px;
+    height: fit-content;
+    background-color: #7c9bc1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 25px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all ease 0.4s;
+}
+
+.btn-signUp {
+    border: solid 2px transparent;
+    border-radius: 5px;
+    height: fit-content;
+    background-color: #5d985e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 25px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all ease 0.4s;
+}
+
+.btn-signIn:hover,
+.btn-signUp:hover {
+    opacity: 0.9;
+    transition: all ease 0.4s;
+}
+
+.btn-signIn:hover {
+    background-color: #3c71bc;
+    border-color: #376db4;
+    box-shadow: 0px 0px 8px 0px #264667;
+}
+
+.btn-signUp:hover {
+    background-color: #4a9c42;
+    border-color: #409640;
+    box-shadow: 0px 0px 8px 0px #1f751f;
+}
+
+img.logo {
+    width: auto;
+    height: 80px;
+    margin: 20px;
+}
+
+.nav-menu ul {
+    padding: 5px 0px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    gap: 50px;
+    background-color: #dae1ee;
+    transition: all ease 0.2s;
+}
+
+.nav-menu ul:hover {
+    background-color: #243869;
+}
+
+.nav-menu ul li:nth-of-type(1) {
+    margin-left: 20px;
+}
+
+.nav-menu ul li h3 a {
+    text-decoration: none;
+    font-size: large;
+    color: #c1c7d6;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.nav-menu ul li h3 a:hover {
+    font-size: large;
+    color: #ffffff;
+}
+
+.principal-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.principal-section img {
+    width: 100%;
+    max-height: 79vh;
+    object-fit: contain;
+}
+
+/* ******** Estilos de ventanas modales Sign In, y Sign Up ******** */
+
+#btn-modal-signUp,
+#btn-modal-signIn {
+    display: none;
+}
+
+/* 
+.modal-menu-responsive pertenece al menú responsive, y no a 
+los modales de inicio de sesión o registro, lo añadimos para 
+disminuir código, además de evitar redundancia en el mismo
+*/
+.modal-signUp-container,
+.modal-signIn-container,
+.modal-menu-responsive {
+    transition: all ease-in 1s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #14203b60;
+    backdrop-filter: blur(1px);
+    z-index: 101;
+}
+
+.btn-close {
+    width: fit-content;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.img-close-modal {
+    width: 16px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.img-close-modal:hover {
+    opacity: 0.4;
+    transform: rotate(180deg);
+    transition: all ease 0.5s;
+}
+
+.modal-signUp,
+.modal-signIn {
+    border-radius: 10px;
+    min-width: 400px;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    position: relative;
+}
+
+.invisible-label-close-modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#btn-modal-signUp:checked ~ .modal-signUp-container {
+    transition: all ease 0.4s;
+    display: flex;
+}
+
+#btn-modal-signUp:checked ~ .modal-signUp-container .modal-signUp {
+    animation-name: showModal;
+    animation-duration: 0.8s;
+}
+
+#btn-modal-signIn:checked ~ .modal-signIn-container {
+    transition: all ease 0.4s;
+    display: flex;
+}
+
+#btn-modal-signIn:checked ~ .modal-signIn-container .modal-signIn {
+    animation-name: showModal;
+    animation-duration: 0.8s;
+}
+
+.modal-form-title {
+    padding-bottom: 2vh;
+    color: #303030;
+    padding-left: 20px;
+}
+
+.form-signUp,
+.form-signIn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.input-form,
+.input-form:active {
+    outline: none;
+    width: 90%;
+    cursor: auto;
+    border: none;
+    background-color: #80808027;
+    padding: 8px;
+}
+
+.input-form:focus, .input-form:hover {
+    background-color: #aaaaaa27;
+}
+
+.form-signUp input[type="submit"].input-form {
+    background-color: #5d985e;
+    color: white;
+    cursor: pointer;
+}
+
+.form-signUp input[type="submit"].input-form:hover {
+    background-color: #6dad6e;
+    color: white;
+}
+
+.form-signIn input[type="submit"].input-form {
+    background-color: #5d7798;
+    color: white;
+    cursor: pointer;
+}
+
+.form-signIn input[type="submit"].input-form:hover {
+    background-color: #6d8bad;
+    color: white;
+}
+
+.personal-hr {
+    width: 98%;
+    height: 2px;
+    background-color: #00000035;
+    border: none;
+}
+
+@keyframes showModal {
+    0% {
+        top: -53vh;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+/********************************************************************/
+
+/************************** RESPONSIVE ***************************/
+
+.modal-menu-responsive,
+#btn-menu-responsive {
+    display: none;
+}
+
+#btn-menu-responsive:checked ~ .modal-menu-responsive {
+    transition: all ease 0.4s;
+    display: flex;
+}
+
+.btn-menu {
+    display: none;
+    width: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-menu:hover {
+    opacity: 0.4;
+    transition: all 0.2s ease;
+}
+
+.menu-responsive {
+    background-color: #ffffff;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 30vh;
+    border-radius: 0 0 10px 10px;
+    animation-name: showModal;
+    animation-duration: 0.8s;
+}
+
+.nav-menu-responsive ul li h3 a {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    color: #181818;
+    transition: all 0.4s ease;
+}
+
+.nav-menu-responsive ul li h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu-responsive ul li,
+.nav-menu-responsive ul li h3 {
+    width: 100%;
+    height: 10vh;
+    cursor: pointer;
+}
+
+.nav-menu-responsive ul li:hover {
+    transition: all 0.4s ease;
+    background-color: #000e2535;
+}
+
+.nav-menu-responsive ul li:hover h3 a {
+    transition: all 0.4s ease;
+    opacity: 0.75;
+}
+
+@media screen and (max-width: 700px) {
+    img.logo {
+        width: auto;
+        height: 50px;
+        margin: 20px;
+    }
+
+    .nav-menu,
+    .search-container {
+        display: none;
+    }
+
+    .btn-menu {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .btn-signIn,
+    .btn-signUp {
+        z-index: 100;
+        position: fixed;
+        bottom: 4vh;
+        right: 20px;
+    }
+
+    .btn-signIn {
+        right: 150px;
+    }
+
+    .modal-signUp,
+    .modal-signIn {
+        border-radius: 10px;
+        min-width: 400px;
+        background-color: #ffffff;
+        padding: 30px 20px;
+        top: -80px;
+        position: relative;
+    }
+
+    .menu-responsive {
+        animation-name: showMenuModal;
+        animation-duration: 0.8s;
+    }
+
+    @keyframes showModal {
+        0% {
+            top: -53vh;
+        }
+        100% {
+            top: -80px;
+        }
+    }
+
+    @keyframes showMenuModal {
+        0% {
+            top: -53vh;
+        }
+        100% {
+            top: 0px;
+        }
+    }
+}
+
+/*****************************************************************/
