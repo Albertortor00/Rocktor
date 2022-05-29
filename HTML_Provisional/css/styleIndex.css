@@ -188,6 +188,7 @@ disminuir código, además de evitar redundancia en el mismo
   left: 0;
   background-color: #14203b60;
   backdrop-filter: blur(1px);
+  z-index: 101;
 }
 
 .btn-close {
@@ -272,7 +273,7 @@ disminuir código, además de evitar redundancia en el mismo
   padding: 8px;
 }
 
-.input-form:focus {
+.input-form:focus, .input-form:hover {
   background-color: #aaaaaa27;
 }
 
@@ -403,13 +404,11 @@ disminuir código, además de evitar redundancia en el mismo
   .btn-signUp {
     z-index: 100;
     position: fixed;
-    bottom: 8vh;
+    bottom: 4vh;
     right: 20px;
   }
 
   .btn-signIn {
-    position: fixed;
-    bottom: 8vh;
     right: 150px;
   }
 
