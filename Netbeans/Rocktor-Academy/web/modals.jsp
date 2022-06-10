@@ -26,7 +26,7 @@
             <!-- <hr class="personal-hr"/><br /> -->
             <input type="text" name="userName" placeholder="Nombre de usuario" class="input-form">
             <input type="password" name="pass" placeholder="Contraseña" class="input-form">
-            <input type="password" name="confirmPass" placeholder="Confirmar la contraseña"
+            <input type="password" name="confirmPass" placeholder="Repita la contraseña"
                    class="input-form"><br />
             <input type="submit" value="Sign Up" class="input-form">
         </form>

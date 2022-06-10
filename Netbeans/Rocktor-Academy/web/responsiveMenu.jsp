@@ -10,13 +10,13 @@
         <nav class="nav-menu-responsive">
             <ul>
                 <li class="nav-menu-item">
-                    <h3><a href="view/cursos.html">Cursos</a></h3>
+                    <h3><a href="cursos.jsp">Cursos</a></h3>
                 </li>
                 <li class="nav-menu-item">
-                    <h3><a href="view/merchandising.html">Merchandising</a></h3>
+                    <h3><a href="merchandising.jsp">Merchandising</a></h3>
                 </li>
                 <li class="nav-menu-item">
-                    <h3><a href="view/contacto.html">Contacto</a></h3>
+                    <h3><a href="contacto.jsp">Contacto</a></h3>
                 </li>
             </ul>
         </nav>

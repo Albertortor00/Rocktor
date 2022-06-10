@@ -1,33 +1,38 @@
 package model;
 
+import java.sql.Timestamp;
+
 /**
  *
  * @author alber
  */
 public class User {
     private String name, surnames, email, user, pass;
+    private Timestamp birthday;
     private boolean admin;
 
     public User() {
     }
 
-    public User(String name, String surnames, String email, String user, String pass) {
+    public User(String name, String surnames, String email, Timestamp birthday, String user, String pass) {
         this.name = name;
         this.surnames = surnames;
         this.email = email;
         this.user = user;
         this.pass = pass;
+        this.birthday = birthday;
         
         // De manera predeterminada, los usuarios no serán administradores
         this.admin = false;
     }
     
-    public User(String name, String surnames, String email, String user, String pass, boolean admin) {
+    public User(String name, String surnames, String email, Timestamp birthday, String user, String pass, boolean admin) {
         this.name = name;
         this.surnames = surnames;
         this.email = email;
         this.user = user;
         this.pass = pass;
+        this.birthday = birthday;
         this.admin = admin;
     }
 

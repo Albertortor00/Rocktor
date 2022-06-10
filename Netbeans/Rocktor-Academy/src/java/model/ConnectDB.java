@@ -21,22 +21,22 @@ public class ConnectDB {
 //    ############################ CONFIGURACIÓN LOCAL ############################
 //    #############################################################################
     
-//    private final String databaseName = "proyectoJava";
-//    private final String user = "rocktorUser";
-//    private final String password = "uPY4wZ8]tWbc1wr3";
-//    private final String host = "192.168.0.222:3306";
-//    private final String url = "jdbc:mysql://" + host + "/" + databaseName;
+    private final String databaseName = "rocktorDB";
+    private final String user = "rocktorUser";
+    private final String password = "uPY4wZ8]tWbc1wr3";
+    private final String host = "localhost:3306";
+    private final String url = "jdbc:mysql://" + host + "/" + databaseName;
 
 //    #############################################################################
 //    #############################################################################
 //    #############################################################################
 
     
-    private final String databaseName = "rocktorDB";
-    private final String user = "admin";
-    private final String password = "admin";
-    private final String host = "192.168.0.222:3306";
-    private final String url = "jdbc:mysql://" + host + "/" + databaseName;
+//    private final String databaseName = "rocktorDB";
+//    private final String user = "admin";
+//    private final String password = "admin";
+//    private final String host = "192.168.0.222:3306";
+//    private final String url = "jdbc:mysql://" + host + "/" + databaseName;
     private Connection con = null;
 
     public Connection getConection() {

@@ -1,8 +1,6 @@
 package test;
 
-import java.sql.Connection;
 import java.util.List;
-import model.ConnectDB;
 import model.DAO.DAOUser;
 import model.User;
 
