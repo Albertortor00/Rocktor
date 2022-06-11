@@ -14,7 +14,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/styleContacto.css">
+        <link rel="stylesheet" href="css/styleContact.css">
         <title>Rocktor Academy</title>
     </head>
     <body>
@@ -73,12 +73,13 @@
                     <p>
                         Envíanos un mensaje por correo y nos pondremos en contacto en un periodo máximo de 48 horas! No dudes en consultarnos cualquier duda que te pueda surgir, además de comentar tu experiencia con nosotros, y proponermos opciones de mejora!
                     </p><br/>
-                    <form class="form-contactUs">
+                    <form method="POST" class="form-contactUs" action="contactMessage">
                         <input type="text" name="name" placeholder="Nombre" class="input-form-contactUs">
                         <input type="text" name="surnames" placeholder="Apellidos" class="input-form-contactUs">
                         <input type="email" name="email" placeholder="email@email.com" class="input-form-contactUs">
-                        <textarea name="comment" cols="80" rows="10" class="input-form-contactUs" placeholder="Escribe aquí tu comentario..."></textarea>
-                        <input type="submit" value="Enviar" class="input-form-contactUs">
+                        <textarea name="message" cols="80" rows="10" class="input-form-contactUs" placeholder="Escribe aquí tu comentario... (Máximo 250 carácteres)"></textarea>
+                        <p class="responseMessage">${responseMessage}</p>
+                        <input type="submit" name="submitMessage" value="Enviar" class="input-form-contactUs">
                     </form>
                 </div>
             </article>

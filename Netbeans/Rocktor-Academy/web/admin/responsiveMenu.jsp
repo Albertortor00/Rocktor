@@ -9,9 +9,12 @@
 <input type="checkbox" id="btn-menu-responsive">
 <div class="modal-menu-responsive">
 
-    <div class="menu-responsive" style="height: 40vh;">
+    <div class="menu-responsive" style="height: 50vh;">
         <nav class="nav-menu-responsive">
             <ul>
+                <li class="nav-menu-item">
+                    <h3><a href="contactMessage.jsp">Mensajes <small class="message-number-responsive">0</small></a></h3>
+                </li>
                 <li class="nav-menu-item">
                     <h3><a href="manageUsers.jsp">Gestionar usuarios</a></h3>
                 </li>
