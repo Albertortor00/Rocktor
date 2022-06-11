@@ -14,6 +14,7 @@ import model.User;
  * @author alber
  */
 public class DAOUser {
+
     public List<User> takeUsers() {
         List<User> usuarios = new ArrayList();
         PreparedStatement ps;
@@ -32,13 +33,13 @@ public class DAOUser {
                 String nombre = rs.getString("nombre");
                 String apellidos = rs.getString("apellidos");
                 String email = rs.getString("email");
-                String administrador = rs.getString("administrador");
-                boolean administradorBoolean = administrador.equals("si");
+                String rol = rs.getString("rol");
+                String birthday = rs.getString("fecha_nacimiento");
 
-                User u = new User(nombre, apellidos, email, usuario, contrasena, administradorBoolean);
+                User u = new User(nombre, apellidos, email, usuario, contrasena, rol, birthday);
                 usuarios.add(u);
             }
-            
+
         } catch (SQLException e) {
             System.out.println(e);
 
@@ -52,7 +53,7 @@ public class DAOUser {
 
         return usuarios;
     }
-    
+
     public User search(String usu) {
         PreparedStatement ps;
         ResultSet rs;
@@ -72,10 +73,10 @@ public class DAOUser {
                 String nombre = rs.getString("nombre");
                 String apellidos = rs.getString("apellidos");
                 String email = rs.getString("email");
-                String administrador = rs.getString("administrador");
-                boolean administradorBoolean = administrador.equals("si");
+                String rol = rs.getString("rol");
+                String birthday = rs.getString("fecha_nacimiento");
 
-                u = new User(nombre, apellidos, email, usuario, contrasena, administradorBoolean);
+                u = new User(nombre, apellidos, email, usuario, contrasena, rol, birthday);
             }
 
         } catch (SQLException e) {
@@ -125,17 +126,18 @@ public class DAOUser {
         Connection con = new ConnectDB().getConection();
 
         String query = "insert into Usuario "
-                + "(usuario, contrasena, nombre, apellidos, email, administrador) "
-                + "values(?,?,?,?,?,?)";
+                + "(nombre, apellidos, email, usuario, contraseña, fecha_nacimiento, rol) "
+                + "values(?,?,?,?,?,?,?)";
 
         try {
             ps = con.prepareStatement(query);
-            ps.setString(1, u.getUser());
-            ps.setString(2, u.getPass());
-            ps.setString(3, u.getName());
-            ps.setString(4, u.getSurnames());
-            ps.setString(5, u.getEmail());
-            ps.setString(6, u.isAdminString());
+            ps.setString(1, u.getName());
+            ps.setString(2, u.getSurnames());
+            ps.setString(3, u.getEmail());
+            ps.setString(4, u.getUser());
+            ps.setString(5, u.getPass());
+            ps.setString(6, u.getBirthday());
+            ps.setString(7, u.getRole());
             ps.execute();
             return true;
 
@@ -157,18 +159,19 @@ public class DAOUser {
         Connection con = new ConnectDB().getConection();
 
         String query = "update Usuario "
-                + "set usuario=?, contrasena=?, nombre=?, apellidos=?, email=?, administrador=? "
+                + "set nombre=?, apellidos=?, email=?, usuario=?, contraseña=?, fecha_nacimiento=?, rol=? "
                 + "where usuario=?";
 
         try {
             ps = con.prepareStatement(query);
-            ps.setString(1, u.getUser());
-            ps.setString(2, u.getPass());
-            ps.setString(3, u.getName());
-            ps.setString(4, u.getSurnames());
-            ps.setString(5, u.getEmail());
-            ps.setString(6, u.isAdminString());
-            ps.setString(7, u.getUser());
+            ps.setString(1, u.getName());
+            ps.setString(2, u.getSurnames());
+            ps.setString(3, u.getEmail());
+            ps.setString(4, u.getUser());
+            ps.setString(5, u.getPass());
+            ps.setString(6, u.getBirthday());
+            ps.setString(7, u.getRole());
+            ps.setString(8, u.getName());
             ps.execute();
             return true;
 
@@ -209,7 +212,7 @@ public class DAOUser {
             }
         }
     }
-    
+
     public boolean exist(String usuario) {
         PreparedStatement ps;
         ResultSet rs;

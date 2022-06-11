@@ -1,39 +1,35 @@
 package model;
 
-import java.sql.Timestamp;
-
 /**
  *
  * @author alber
  */
 public class User {
-    private String name, surnames, email, user, pass;
-    private Timestamp birthday;
-    private boolean admin;
+
+    private String name, surnames, email, user, pass, role;
+    private String birthday;
 
     public User() {
     }
 
-    public User(String name, String surnames, String email, Timestamp birthday, String user, String pass) {
+    public User(String name, String surnames, String email, String user, String pass, String birthday) {
         this.name = name;
         this.surnames = surnames;
         this.email = email;
         this.user = user;
         this.pass = pass;
         this.birthday = birthday;
-        
-        // De manera predeterminada, los usuarios no serán administradores
-        this.admin = false;
+        this.role = "Alumno";
     }
-    
-    public User(String name, String surnames, String email, Timestamp birthday, String user, String pass, boolean admin) {
+
+    public User(String name, String surnames, String email, String user, String pass, String role, String birthday) {
         this.name = name;
         this.surnames = surnames;
         this.email = email;
         this.user = user;
         this.pass = pass;
+        this.role = role;
         this.birthday = birthday;
-        this.admin = admin;
     }
 
     public String getName() {
@@ -76,22 +72,20 @@ public class User {
         this.pass = pass;
     }
 
-    public boolean isAdmin() {
-        return admin;
-    }
-    
-    public String isAdminString() {
-        return this.admin ? "si" : "no";
+    public String getRole() {
+        return role;
     }
 
-    public void setAdmin(boolean admin) {
-        this.admin = admin;
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    @Override
-    public String toString() {
-        return "User{" + "name=" + name + ", surnames=" + surnames + ", email=" + email + ", user=" + user + ", pass=" + pass + ", admin=" + admin + '}';
+    public String getBirthday() {
+        return birthday;
     }
-    
-    
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
 }

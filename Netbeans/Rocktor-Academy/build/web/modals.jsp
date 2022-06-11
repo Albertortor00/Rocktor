@@ -28,7 +28,9 @@
             <input type="password" name="pass" placeholder="Contraseña" class="input-form">
             <input type="password" name="confirmPass" placeholder="Repita la contraseña"
                    class="input-form"><br />
-            <input type="submit" value="Sign Up" class="input-form">
+            <p style="color: #C41414;" >${errorMessage2}</p>
+            <p style="color: #5DC414;" >${successMessage}</p>
+            <input type="submit" name="submitSignUp" value="Sign Up" class="input-form">
         </form>
     </div>
     <label for="btn-modal-signUp" class="invisible-label-close-modal"></label>

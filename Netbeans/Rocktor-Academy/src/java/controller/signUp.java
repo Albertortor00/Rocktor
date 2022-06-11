@@ -11,7 +11,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.DAO.DAOUser;
 import model.User;
 
@@ -35,39 +34,62 @@ public class signUp extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            HttpSession sesion = request.getSession();
-            String errorMessage;
+            String errorMessage, successMessage;
 
             if (request.getParameter("submitSignUp") != null) {
-                String name = request.getParameter("name"),
-                        surnames = request.getParameter("surnames"),
-                        email = request.getParameter("email"),
-                        birthday = request.getParameter("birthday"),
-                        userName = request.getParameter("userName"),
-                        password = request.getParameter("pass"),
-                        confirmPass = request.getParameter("confirmPass");
-                        
-                User usuario = new User(name, surnames, email, userName, password);
+                if (!request.getParameter("name").equals("")
+                        && !request.getParameter("surnames").equals("")
+                        && !request.getParameter("email").equals("")
+                        && !request.getParameter("birthday").equals("")
+                        && !request.getParameter("userName").equals("")
+                        && !request.getParameter("pass").equals("")
+                        && !request.getParameter("confirmPass").equals("")) {
 
-                if (new DAOUser().signIn(userName, password)) {
-                    sesion.setAttribute("actualUser", usuario);
+                    String name = request.getParameter("name"),
+                            surnames = request.getParameter("surnames"),
+                            email = request.getParameter("email"),
+                            birthday = request.getParameter("birthday"),
+                            userName = request.getParameter("userName"),
+                            password = request.getParameter("pass"),
+                            confirmPass = request.getParameter("confirmPass");
 
-                    if (usuario.isAdmin()) {
-                        response.sendRedirect("admin.jsp");
+                    if (password.equals(confirmPass)) {
+                        User usuario = new User(name, surnames, email, userName, password, birthday);
+
+                        if (new DAOUser().exist(usuario.getUser())) {
+                            errorMessage = "El nombre de usuario ya existe!";
+                            request.setAttribute("errorMessage2", errorMessage);
+                            getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+                        } else {
+                            if (new DAOUser().signUp(usuario)) {
+                                successMessage = "Usuario creado correctamente, pruebe a iniciar sesión";
+                                request.setAttribute("successMessage", successMessage);
+                                getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+                            } else {
+                                errorMessage = "Hemos tenido un problema al registrar el nuevo usuario";
+                                request.setAttribute("errorMessage2", errorMessage);
+                                getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+                            }
+                        }
+
                     } else {
-                        response.sendRedirect("main.jsp");
+                        errorMessage = "Las contraseñas introducidas no coinciden";
+                        request.setAttribute("errorMessage2", errorMessage);
+                        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
                     }
-                    return;
 
                 } else {
-                    errorMessage = "El usuario o contraseña es incorrecto";
-                    request.setAttribute("errorMessage", errorMessage);
-                    getServletContext().getRequestDispatcher("/modals.jsp").forward(request, response);
+                    errorMessage = "Debe rellenar todos los campos, son obligatorios";
+                    request.setAttribute("errorMessage2", errorMessage);
+                    getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
                 }
+
             } else {
                 errorMessage = "";
-                request.setAttribute("errorMessage", errorMessage);
-                getServletContext().getRequestDispatcher("main.jsp").forward(request, response);
+                successMessage = "";
+                request.setAttribute("errorMessage2", errorMessage);
+                request.setAttribute("successMessage", successMessage);
+                getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
             }
         }
     }

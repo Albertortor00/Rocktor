@@ -33,32 +33,37 @@ public class signIn extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
 
             HttpSession sesion = request.getSession();
-            String errorMessage;
+            String errorMessage, user, password;
+            User usuario = null;
 
             if (request.getParameter("submitSignIn") != null) {
-                String user = request.getParameter("userName");
-                String password = request.getParameter("pass");
-                User usuario = new DAOUser().search(user);
+                if (request.getParameter("userName") != null && request.getParameter("pass") != null) {
 
-                if (new DAOUser().signIn(user, password)) {
-                    sesion.setAttribute("actualUser", usuario);
+                    user = request.getParameter("userName");
+                    password = request.getParameter("pass");
 
-                    if (usuario.isAdmin()) {
-                        response.sendRedirect("admin.jsp");
+                    usuario = new DAOUser().search(user);
+
+                    if (new DAOUser().signIn(user, password)) {
+                        sesion.setAttribute("actualUser", usuario);
+
+                        if (usuario.getRole().equals("Administrador")) {
+                            response.sendRedirect("admin/index.jsp");
+                        } else {
+                            response.sendRedirect("main.jsp");
+                        }
+
                     } else {
-                        response.sendRedirect("main.jsp");
+                        errorMessage = "El usuario o contraseña es incorrecto";
+                        request.setAttribute("errorMessage", errorMessage);
+                        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
                     }
-                    return;
-
-                } else {
-                    errorMessage = "El usuario o contraseña es incorrecto";
-                    request.setAttribute("errorMessage", errorMessage);
-                    getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
                 }
+
             } else {
                 errorMessage = "";
                 request.setAttribute("errorMessage", errorMessage);
-                getServletContext().getRequestDispatcher("main.jsp").forward(request, response);
+                getServletContext().getRequestDispatcher("/main.jsp").forward(request, response);
             }
 
         }

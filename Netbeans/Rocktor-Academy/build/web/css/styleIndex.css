@@ -116,6 +116,23 @@ img.logo {
     margin: 20px;
 }
 
+.close-session-button{
+    background-color: transparent;
+    border:none;
+    padding-top: 10px;
+}
+
+.img-close-session{
+    cursor:pointer;
+    width: 64px
+}
+
+.img-close-session:hover{
+    opacity: 0.8;
+}
+
+
+
 .nav-menu ul {
     padding: 5px 0px;
     display: flex;
@@ -384,6 +401,25 @@ disminuir código, además de evitar redundancia en el mismo
 }
 
 @media screen and (max-width: 700px) {
+    .img-close-session{
+        display: none;
+    }
+
+    .form-close-session-responsive{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #181818;
+    }
+
+    .close-session-button{
+        padding: 0;
+        width: 100%;
+        height: 10vh;
+        cursor:pointer;
+    }
+
     img.logo {
         width: auto;
         height: 50px;
