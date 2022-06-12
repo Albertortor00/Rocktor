@@ -22,9 +22,12 @@
         <jsp:include page="header.jsp"/>
 
         <section class="merchandising">
-            <article class="product">
-               
-            </article>
+            <c:forEach items="${merchandisings}" var="mer">
+                <article class="product">
+                    <img src="${mer.image}" class="img-product" alt="${mer.name}"/>
+                    <h3>${mer.name}</h3>
+                </article>
+            </c:forEach>
         </section>
 
         <jsp:include page="modals.jsp"/>

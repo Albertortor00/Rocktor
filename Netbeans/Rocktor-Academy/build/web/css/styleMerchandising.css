@@ -1,1 +1,28 @@
 @import url("styleIndex.css");
+
+.merchandising{
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  
+    gap: 50px;
+}
+
+.product{
+    padding: 20px;
+    background-color: #00000010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border: solid 4px #00000010;
+    border-radius: 10px;
+}
+
+.img-product{
+    max-width: 200px;
+    border-radius: 20px;
+}

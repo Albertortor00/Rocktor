@@ -22,116 +22,23 @@
         <jsp:include page="header.jsp"/>
 
         <section class="curses">
-            <article class="curse">
-                <div class="first-container">
-                    <h2>Titulo del curso</h2>
-                    <img src="img/wallpapers/default-curse.webp" alt="imagen del curso" class="img-curse">
-                </div>
-                <div class="second-container">
-                    <p class="curse-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis minima
-                        modi, aspernatur a itaque
-                        labore! Ea ex adipisci nisi eum inventore nulla consectetur enim cum a. Nobis quas minima esse.
-                        Consequatur veritatis eos illo vel, nostrum exercitationem, qui doloremque maiores quidem facilis
-                        at,
-                        maxime soluta reiciendis ea esse nulla aspernatur provident. Natus eveniet cumque sapiente inventore
-                        delectus pariatur, repellat culpa.
-                        Sunt distinctio commodi animi molestiae dicta.</p>
-                    <br />
-                    <h3>Duración estimada: 200 Horas</h3>
-                    <small>Autores: Alberto Campos Gómez</small>
-                    <h3 class="price-task">95'99€</h3>
-                    <button class="btn-buy">Adquirir</button>
-                    <button class="btn-buy-responsive">+</button>
-                </div>
-            </article>
-            <article class="curse">
-                <div class="first-container">
-                    <h2>Titulo del curso</h2>
-                    <img src="img/wallpapers/default-curse.webp" alt="imagen del curso" class="img-curse">
-                </div>
-                <div class="second-container">
-                    <p class="curse-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis minima
-                        modi, aspernatur a itaque
-                        labore! Ea ex adipisci nisi eum inventore nulla consectetur enim cum a. Nobis quas minima esse.
-                        Consequatur veritatis eos illo vel, nostrum exercitationem, qui doloremque maiores quidem facilis
-                        at,
-                        maxime soluta reiciendis ea esse nulla aspernatur provident. Natus eveniet cumque sapiente inventore
-                        delectus pariatur, repellat culpa.
-                        Sunt distinctio commodi animi molestiae dicta.</p>
-                    <br />
-                    <h3>Duración estimada: 200 Horas</h3>
-                    <small>Autores: Alberto Campos Gómez</small>
-                    <h3 class="price-task">95'99€</h3>
-                    <button class="btn-buy">Adquirir</button>
-                    <button class="btn-buy-responsive">+</button>
-                </div>
-            </article>
-            <article class="curse">
-                <div class="first-container">
-                    <h2>Titulo del curso</h2>
-                    <img src="img/wallpapers/default-curse.webp" alt="imagen del curso" class="img-curse">
-                </div>
-                <div class="second-container">
-                    <p class="curse-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis minima
-                        modi, aspernatur a itaque
-                        labore! Ea ex adipisci nisi eum inventore nulla consectetur enim cum a. Nobis quas minima esse.
-                        Consequatur veritatis eos illo vel, nostrum exercitationem, qui doloremque maiores quidem facilis
-                        at,
-                        maxime soluta reiciendis ea esse nulla aspernatur provident. Natus eveniet cumque sapiente inventore
-                        delectus pariatur, repellat culpa.
-                        Sunt distinctio commodi animi molestiae dicta.</p>
-                    <br />
-                    <h3>Duración estimada: 200 Horas</h3>
-                    <small>Autores: Alberto Campos Gómez</small>
-                    <h3 class="price-task">95'99€</h3>
-                    <button class="btn-buy">Adquirir</button>
-                    <button class="btn-buy-responsive">+</button>
-                </div>
-            </article>
-            <article class="curse">
-                <div class="first-container">
-                    <h2>Titulo del curso</h2>
-                    <img src="img/wallpapers/default-curse.webp" alt="imagen del curso" class="img-curse">
-                </div>
-                <div class="second-container">
-                    <p class="curse-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis minima
-                        modi, aspernatur a itaque
-                        labore! Ea ex adipisci nisi eum inventore nulla consectetur enim cum a. Nobis quas minima esse.
-                        Consequatur veritatis eos illo vel, nostrum exercitationem, qui doloremque maiores quidem facilis
-                        at,
-                        maxime soluta reiciendis ea esse nulla aspernatur provident. Natus eveniet cumque sapiente inventore
-                        delectus pariatur, repellat culpa.
-                        Sunt distinctio commodi animi molestiae dicta.</p>
-                    <br />
-                    <h3>Duración estimada: 200 Horas</h3>
-                    <small>Autores: Alberto Campos Gómez</small>
-                    <h3 class="price-task">95'99€</h3>
-                    <button class="btn-buy">Adquirir</button>
-                    <button class="btn-buy-responsive">+</button>
-                </div>
-            </article>
-            <article class="curse">
-                <div class="first-container">
-                    <h2>Titulo del curso</h2>
-                    <img src="img/wallpapers/default-curse.webp" alt="imagen del curso" class="img-curse">
-                </div>
-                <div class="second-container">
-                    <p class="curse-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis minima
-                        modi, aspernatur a itaque
-                        labore! Ea ex adipisci nisi eum inventore nulla consectetur enim cum a. Nobis quas minima esse.
-                        Consequatur veritatis eos illo vel, nostrum exercitationem, qui doloremque maiores quidem facilis
-                        at,
-                        maxime soluta reiciendis ea esse nulla aspernatur provident. Natus eveniet cumque sapiente inventore
-                        delectus pariatur, repellat culpa.
-                        Sunt distinctio commodi animi molestiae dicta.</p>
-                    <br />
-                    <h3>Duración estimada: 200 Horas</h3>
-                    <small>Autores: Alberto Campos Gómez</small>
-                    <h3 class="price-task">95'99€</h3>
-                    <button class="btn-buy">Adquirir</button>
-                    <button class="btn-buy-responsive">+</button>
-                </div>
-            </article>
+            <c:forEach items="${curses}" var="cur">
+                <article class="curse">
+                    <div class="first-container">
+                        <h2>${cur.title}</h2>
+                        <img src="${cur.image}" alt="${cur.title}" class="img-curse">
+                    </div>
+                    <div class="second-container">
+                        <p class="curse-description">${cur.description}</p>
+                        <br />
+                        <h3>Duración estimada: ${cur.duration} Horas</h3>
+                        <small>Autor: ${cur.author}</small>
+                        <h3 class="price-task">${cur.price}€</h3>
+                        <button class="btn-buy">Adquirir</button>
+                        <button class="btn-buy-responsive">+</button>
+                    </div>
+                </article>
+            </c:forEach>
         </section>
 
         <jsp:include page="modals.jsp"/>
