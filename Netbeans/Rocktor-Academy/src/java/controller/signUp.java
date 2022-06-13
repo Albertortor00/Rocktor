@@ -43,7 +43,8 @@ public class signUp extends HttpServlet {
                         && !request.getParameter("birthday").equals("")
                         && !request.getParameter("userName").equals("")
                         && !request.getParameter("pass").equals("")
-                        && !request.getParameter("confirmPass").equals("")) {
+                        && !request.getParameter("confirmPass").equals("")
+                        && !request.getParameter("role").equals("")) {
 
                     String name = request.getParameter("name"),
                             surnames = request.getParameter("surnames"),
@@ -51,10 +52,11 @@ public class signUp extends HttpServlet {
                             birthday = request.getParameter("birthday"),
                             userName = request.getParameter("userName"),
                             password = request.getParameter("pass"),
-                            confirmPass = request.getParameter("confirmPass");
+                            confirmPass = request.getParameter("confirmPass"),
+                            role = request.getParameter("role");
 
                     if (password.equals(confirmPass)) {
-                        User usuario = new User(name, surnames, email, userName, password, birthday);
+                        User usuario = new User(name, surnames, email, userName, password, birthday, role);
 
                         if (new DAOUser().exist(usuario.getUser())) {
                             errorMessage = "El nombre de usuario ya existe!";

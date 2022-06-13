@@ -73,10 +73,10 @@ public class DAOUser {
                 String nombre = rs.getString("nombre");
                 String apellidos = rs.getString("apellidos");
                 String email = rs.getString("email");
-                String rol = rs.getString("rol");
                 String birthday = rs.getString("fecha_nacimiento");
+                String role = rs.getString("rol");
 
-                u = new User(nombre, apellidos, email, usuario, contrasena, rol, birthday);
+                u = new User(nombre, apellidos, email, usuario, contrasena, birthday, role);
             }
 
         } catch (SQLException e) {
@@ -171,7 +171,7 @@ public class DAOUser {
             ps.setString(5, u.getPass());
             ps.setString(6, u.getBirthday());
             ps.setString(7, u.getRole());
-            ps.setString(8, u.getName());
+            ps.setString(8, u.getUser());
             ps.execute();
             return true;
 

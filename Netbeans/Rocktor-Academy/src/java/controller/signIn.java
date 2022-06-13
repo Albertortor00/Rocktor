@@ -50,7 +50,7 @@ public class signIn extends HttpServlet {
                         if (usuario.getRole().equals("Administrador")) {
                             response.sendRedirect("admin/index.jsp");
                         } else {
-                            response.sendRedirect("main.jsp");
+                            response.sendRedirect("index.jsp");
                         }
 
                     } else {
@@ -63,7 +63,7 @@ public class signIn extends HttpServlet {
             } else {
                 errorMessage = "";
                 request.setAttribute("errorMessage", errorMessage);
-                getServletContext().getRequestDispatcher("/main.jsp").forward(request, response);
+                getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
             }
 
         }

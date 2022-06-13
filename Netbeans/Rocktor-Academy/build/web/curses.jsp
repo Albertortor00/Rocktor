@@ -34,8 +34,24 @@
                         <h3>Duración estimada: ${cur.duration} Horas</h3>
                         <small>Autor: ${cur.author}</small>
                         <h3 class="price-task">${cur.price}€</h3>
-                        <button class="btn-buy">Adquirir</button>
-                        <button class="btn-buy-responsive">+</button>
+                        <c:choose>
+                            <c:when test="${actualUser != null}">
+                                <form action="buyWindow" method="post">
+                                    <input type="hidden" name="curseId" value="${cur.id}"/>
+                                    <button type="submit" name="submit" class="btn-buy">Adquirir</button>
+                                    <button type="submit" name="submit" class="btn-buy-responsive">+</button>
+                                </form>
+                            </c:when>
+                            <c:otherwise>
+                                <label for="btn-modal-signIn">
+                                    <div class="btn-buy">Adquirir</div>
+                                </label>
+                                <label for="btn-modal-signIn">
+                                    <div class="btn-buy-responsive">+</div>
+                                </label>
+                            </c:otherwise>
+                        </c:choose>
+
                     </div>
                 </article>
             </c:forEach>

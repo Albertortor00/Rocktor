@@ -26,6 +26,23 @@
                 <article class="product">
                     <img src="${mer.image}" class="img-product" alt="${mer.name}"/>
                     <h3>${mer.name}</h3>
+                    <c:choose>
+                        <c:when test="${actualUser != null}">
+                            <form action="buyWindow" method="post" class="form-price-order-button">
+                                <input type="hidden" name="merchandisingId" value="${mer.id}"/>
+                                <h3 class="price-task">${mer.price}€</h3>
+                                <button type="submit" name="submit" class="btn-buy">Adquirir</button>
+                            </form>
+                        </c:when>
+                        <c:otherwise>
+                            <label for="btn-modal-signIn">
+                                <div class="btn-buy">Adquirir</div>
+                            </label>
+                            <label for="btn-modal-signIn">
+                                <div class="btn-buy-responsive">+</div>
+                            </label>
+                        </c:otherwise>
+                    </c:choose>
                 </article>
             </c:forEach>
         </section>

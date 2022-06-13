@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import model.ConnectDB;
 import model.Curse;
+import model.CurseOrder;
 
 /**
  *
@@ -172,6 +173,35 @@ public class DAOCurse {
         try {
             ps = con.prepareStatement(query);
             ps.setInt(1, id);
+            ps.execute();
+            return true;
+
+        } catch (SQLException e) {
+            System.out.println(e);
+            return false;
+
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e);
+            }
+        }
+    }
+    
+    public boolean order(CurseOrder co) {
+        PreparedStatement ps;
+        Connection con = new ConnectDB().getConection();
+        
+        String query = "insert into Curso_Adquirido "
+                + "(id_curso, usuario_usuario, fecha_compra) "
+                + "values(?,?,?)";
+
+        try {
+            ps = con.prepareStatement(query);
+            ps.setInt(1, co.getIdCurse());
+            ps.setString(2, co.getUser());
+            ps.setString(3, co.getOrderDate());
             ps.execute();
             return true;
 

@@ -1,0 +1,116 @@
+@import url("styleIndex.css");
+
+.principal-section{
+    width: 100%;
+    padding: 20px;
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    background-color: #ffffff80;
+    backdrop-filter:blur(5px);
+    min-height:fit-content;
+    border: solid 4px #2c488a10;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.imgs-buy-window{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.img-buy{
+    max-width: 128px;
+    padding: 5px 20px;
+}
+
+.img-buy-form{
+    max-width: 48px;
+}
+
+.form-buy-products{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+}
+
+.form-buy-products div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cancel-button{
+    background-color: #000000CC;
+    border: none;
+    padding: 5px 25px;
+    color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.order-button{
+    background-color: #1f751fCC;
+    border: none;
+    padding: 5px 25px;
+    color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.order-button:hover, .cancel-button:hover{
+    opacity: 80%;
+}
+
+.form-buttons{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-signUp{
+    width: 100%;
+}
+
+.input-form.disabled{
+    background-color: #80808080;
+}
+
+.input-form.disabled:hover{
+    background-color: #80808080;
+}
+
+@media screen and (max-width: 700px) {
+    .img-buy-form{
+        display: none;
+    }
+
+    .input-form{
+        width: 100%;
+    }
+
+    .form-buy-products{
+        padding: 0;
+        width:100%;
+        gap:20px;
+    }
+
+}

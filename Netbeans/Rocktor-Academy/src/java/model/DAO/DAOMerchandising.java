@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model.DAO;
 
 import java.sql.Connection;
@@ -11,8 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.ConnectDB;
-import model.Curse;
 import model.Merchandising;
+import model.MerchandisingOrder;
 
 /**
  *
@@ -163,6 +159,35 @@ public class DAOMerchandising {
         try {
             ps = con.prepareStatement(query);
             ps.setString(1, id);
+            ps.execute();
+            return true;
+
+        } catch (SQLException e) {
+            System.out.println(e);
+            return false;
+
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e);
+            }
+        }
+    }
+    
+    public boolean order(MerchandisingOrder mo) {
+        PreparedStatement ps;
+        Connection con = new ConnectDB().getConection();
+        
+        String query = "insert into Merchandising_Adquirido "
+                + "(id_Merchandising, usuario_usuario, fecha_compra) "
+                + "values(?,?,?)";
+
+        try {
+            ps = con.prepareStatement(query);
+            ps.setString(1, mo.getIdMerchandising());
+            ps.setString(2, mo.getUser());
+            ps.setString(3, mo.getOrderDate());
             ps.execute();
             return true;
 
