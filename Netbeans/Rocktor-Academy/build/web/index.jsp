@@ -22,8 +22,11 @@
         <jsp:include page="header.jsp"/>
 
         <section class="principal-section">
-            <!-- Imagen desechada por mi parte, ya que no me agradaba la estética 
-                <img src="img/wallpapers/img-1.webp" alt="Background"> -->
+            <video class="index-video" autoplay muted loop>
+                <source src="video/indexVideo.mp4" type="video/mp4">
+                <source src="video/indexVideo.ogv" type="video/ogg">
+                Tu navegador no es compatible con videos HTML5
+            </video>
         </section>
 
         <jsp:include page="modals.jsp"/>

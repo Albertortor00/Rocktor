@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Curse;
 import model.DAO.DAOCurse;
+import model.User;
 
 /**
  *
@@ -35,12 +36,18 @@ public class curses extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
+
+            if (request.getSession().getAttribute("actualUser") != null) {
+                User actual = (User) request.getSession().getAttribute("actualUser");
+                List<Curse> myCurses = new DAOCurse().getMyCurses(actual);
+                request.getSession().setAttribute("myCurses", myCurses);
+            }
+
             List<Curse> curses = new DAOCurse().getCurses();
-            
             request.getSession().setAttribute("curses", curses);
+
             response.sendRedirect("curses.jsp");
-            
+
         }
     }
 

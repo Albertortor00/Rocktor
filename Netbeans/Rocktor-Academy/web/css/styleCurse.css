@@ -1,0 +1,21 @@
+@import url("styleIndex.css");
+
+.principal-section{
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.first-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.files-container{
+    justify-content: flex-start;
+    background-color: #ffffffc2;
+    width: 80%;
+    padding: 20px;
+}
+

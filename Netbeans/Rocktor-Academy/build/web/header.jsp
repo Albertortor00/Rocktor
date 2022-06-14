@@ -66,7 +66,7 @@
                     <h3><a href="manageProfile.jsp">Mi perfil</a></h3>
                 </li>
                 <li class="nav-menu-item">
-                    <h3><a href="manageCurses.jsp">Mis cursos</a></h3>
+                    <h3><a href="manageCurses">Mis cursos</a></h3>
                 </li>
             </c:if>
         </ul>

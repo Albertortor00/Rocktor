@@ -271,6 +271,11 @@ disminuir código, además de evitar redundancia en el mismo
     padding-left: 20px;
 }
 
+.index-video{
+    width: 75%;
+    border-radius: 20px;
+}
+
 .form-signUp,
 .form-signIn {
     display: flex;

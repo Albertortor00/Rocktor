@@ -35,11 +35,9 @@
                             </form>
                         </c:when>
                         <c:otherwise>
-                            <label for="btn-modal-signIn">
-                                <div class="btn-buy">Adquirir</div>
-                            </label>
-                            <label for="btn-modal-signIn">
-                                <div class="btn-buy-responsive">+</div>
+                            <h3 class="price-task">${mer.price}€</h3>
+                            <label class="btnModal" for="btn-modal-signIn">
+                                <div class="btn-buy-without-session">Adquirir</div>
                             </label>
                         </c:otherwise>
                     </c:choose>

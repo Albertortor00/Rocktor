@@ -2,120 +2,168 @@
 
 
 .curses {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 3vh;
-  gap: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3vh;
+    gap: 5vh;
 }
 
-.curse {
-  position: relative;
-  padding: 3vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 4vw;
-  border-radius: 10px;
-  background-color: #ffffffc2;
-  width: 90%;
-  box-shadow: 0px 0px 10px 8px #0000002c;
+.curse, .curseAux {
+    position: relative;
+    padding: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vw;
+    border-radius: 10px;
+    background-color: #ffffffc2;
+    width: 90%;
+    box-shadow: 0px 0px 10px 8px #0000002c;
+    transition: all 0.4s ease;
 }
 
 .first-container {
-  padding-left: 2vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 4vh;
+    padding-left: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vh;
 }
 
 .second-container {
-  padding-right: 2vw;
+    padding-right: 2vw;
 }
 
 .second-container small {
-  width: 100%;
-  text-align: right;
-  font-weight: bold;
-  color: #4f4f4f88;
+    width: 100%;
+    text-align: right;
+    font-weight: bold;
+    color: #4f4f4f88;
 }
 
-.btn-buy {
-  font-size: xx-large;
-  font-weight: bolder;
-  position: absolute;
-  border-radius: 50px;
-  right: 80px;
-  bottom: 30px;
-  padding: 5px 20px;
-  border: none;
-  background-color: #5e9e64;
-  color: white;
-  cursor: pointer;
-}
-
-.btn-buy-responsive{
-  display: none;
-}
-
-.btn-buy:hover {
-  background-color: #74ae7a;
-}
-
-.img-curse {
-  width: 30vw;
-  height: 35vh;
-}
-
-.price-task{
-  margin-top: 15px;
-  background-color: #447ba8;
-  width: fit-content;
-  padding: 3px 20px;
-  color: #ffffff;
-  border-radius: 50px;
-  letter-spacing: 2px;
-}
-
-@media screen and (max-width: 700px) {
-  .curses {
-    padding-bottom: 12vh;
-  }
-
-  .btn-buy{
-    display: none;
-  }
-
-  .btn-buy-responsive {
+.btn-buy, .input-access-curse {
+    font-size: xx-large;
+    font-weight: bolder;
     position: absolute;
+    border-radius: 50px;
+    right: 80px;
+    bottom: 30px;
+    padding: 5px 20px;
     border: none;
     background-color: #5e9e64;
     color: white;
     cursor: pointer;
-    font-size: large;
-    font-weight: bolder;
-    display: initial;
-    right: 45px;
-    bottom: 25px;
-    border-radius: 100%;
-    padding: 0px 6px;
-  }
+}
 
-  .img-curse {
-    height: 20vh;
-    width: 50vw;
-  }
-  .curse-description {
+.input-access-curse{
+    background-color: #444444;
+    transition: all 0.4s ease;
+}
+
+.input-access-curse:hover{
+    opacity: 0.8;
+    transition: all 0.4s ease;
+}
+
+.btn-buy-responsive{
     display: none;
-  }
+}
 
-  .second-container h3,
-  .second-container small, 
-  .price-task{
-    font-size: small;
-  }
+.btn-buy:hover {
+    background-color: #74ae7a;
+}
+
+.img-curse {
+    width: 30vw;
+    height: 35vh;
+}
+
+.price-task{
+    margin-top: 15px;
+    background-color: #447ba8;
+    width: fit-content;
+    padding: 3px 20px;
+    color: #ffffff;
+    border-radius: 50px;
+    letter-spacing: 2px;
+}
+
+.create-new-curse, .form-create-new-curse{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap:20px;
+}
+
+input[name="submitNewCurse"]{
+    padding: 0px 10px;
+    border-radius: 50px;
+    font-size: xx-large;
+    background-color: #2c488a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+input[name="submitNewCurse"]:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 700px) {
+    .form-access-curse{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input-access-curse {
+        font-size: x-large;
+        margin-top: 20px;
+        background-color: #444444;
+        position:static;
+    }
+
+    .curses {
+        padding-bottom: 12vh;
+    }
+
+    .btn-buy{
+        display: none;
+    }
+
+    .btn-buy-responsive{
+        position: absolute;
+        border: none;
+        background-color: #5e9e64;
+        color: white;
+        cursor: pointer;
+        font-size: large;
+        font-weight: bolder;
+        display: initial;
+        right: 45px;
+        bottom: 25px;
+        border-radius: 100%;
+        padding: 0px 6px;
+    }
+
+    .img-curse {
+        height: 20vh;
+        width: 50vw;
+    }
+    .curse-description {
+        display: none;
+    }
+
+    .second-container h3,
+    .second-container small,
+    .price-task{
+        font-size: small;
+    }
 }

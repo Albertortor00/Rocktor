@@ -60,3 +60,30 @@
 .btn-buy:hover{
     opacity: 0.8;
 }
+
+.btn-buy-without-session {
+    font-weight: bolder;
+    position: absolute;
+    border-radius: 50px;
+    right: 30px;
+    bottom: 5px;
+    padding: 5px 20px;
+    border: none;
+    background-color: #5e9e64;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-buy-without-session:hover{
+    opacity: 0.8;
+}
+
+label.btnModal{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap:20px;
+    position: relative;
+}
