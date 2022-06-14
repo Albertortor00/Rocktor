@@ -99,6 +99,15 @@
 }
 
 @media screen and (max-width: 700px) {
+    .principal-section{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .order-article{
+        width: 100%;
+    }
+
     .img-buy-form{
         display: none;
     }

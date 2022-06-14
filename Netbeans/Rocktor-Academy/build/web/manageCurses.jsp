@@ -31,7 +31,7 @@
                 </div>
             </c:if>
             <c:choose>
-                <c:when test="${myCurses.size() <= 0}">
+                <c:when test="${myCurses.size() <= 0 || myCurses == null}">
                     <article class="curse">
                         <div class="first-container">
                             <h2>Todavía no se ha adquirido ningún curso</h2>
