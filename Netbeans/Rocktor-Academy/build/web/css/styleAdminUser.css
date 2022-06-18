@@ -1,0 +1,96 @@
+@import url("styleAdmin.css");
+
+.principal-section{
+    flex-direction: column;
+}
+
+.form-create-new-curse{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap:20px;
+}
+
+input[name="submitNewCurse"]{
+    padding: 0px 6px;
+    border-radius: 50px;
+    font-size: x-large;
+    background-color: #409640;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+input[name="submitNewCurse"]:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1050px) {
+    .manage-td{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }    
+    
+    .responsive-td{
+        display: block;
+    }
+
+    thead{
+        display: none;
+    }
+
+    table{
+        max-width: 100vw;
+        min-width: 300px;
+    }
+
+    table, tr, td {
+        min-width: 90vw;
+        display: block;
+    }
+
+    /*Solo funciona con rem o vw*/
+    tr{
+        max-width: 100vw;
+    }
+
+    td:before{
+        position: absolute;
+        left: 5px;
+    }
+
+    td:nth-child(1):before{
+        content: "Nombre";
+    }
+    td:nth-child(2):before{
+        content: "Apellidos";
+    }
+    td:nth-child(3):before{
+        content: "Email";
+    }
+    td:nth-child(4):before{
+        content: "Usuario";
+    }
+    td:nth-child(5):before{
+        content: "Pass";
+    }
+    td:nth-child(6):before{
+        content: "Date";
+    }
+    td:nth-child(7):before{
+        content: "Rol";
+    }
+/*    td:nth-child(8):before{
+        content: "Gestión";
+    }*/
+
+    td{
+        padding-left: 50%;
+        width: auto;
+        position: relative;
+        text-align: left;
+    }
+}

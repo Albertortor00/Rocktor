@@ -13,7 +13,7 @@
         <nav class="nav-menu-responsive">
             <ul>
                 <li class="nav-menu-item">
-                    <h3><a href="contactMessage.jsp">Mensajes <small class="message-number-responsive">0</small></a></h3>
+                    <h3><a href="contactMessage.jsp">Mensajes <small class="message-number-responsive">${messagesNum}</small></a></h3>
                 </li>
                 <li class="nav-menu-item">
                     <h3><a href="manageUsers.jsp">Gestionar usuarios</a></h3>

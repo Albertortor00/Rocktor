@@ -22,8 +22,8 @@ public class ConnectDB {
     private final String password = "uPY4wZ8]tWbc1wr3";
     private final String host = "localhost:3306";
     
-    // No es necesario a partir de la versión mysql-connector-java 5.1.39 en adelante, sin incluir la misma.
-    private final String timeSolution = "?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    // Solución para fallo de conexión por culpa de zona horaria y varios problemas más
+    private final String timeSolution = "?useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&characterEncoding=utf8";
     
     private final String url = "jdbc:mysql://" + host + "/" + databaseName + timeSolution;
 

@@ -36,7 +36,7 @@ public class DAOUser {
                 String rol = rs.getString("rol");
                 String birthday = rs.getString("fecha_nacimiento");
 
-                User u = new User(nombre, apellidos, email, usuario, contrasena, rol, birthday);
+                User u = new User(nombre, apellidos, email, usuario, contrasena, birthday, rol);
                 usuarios.add(u);
             }
 

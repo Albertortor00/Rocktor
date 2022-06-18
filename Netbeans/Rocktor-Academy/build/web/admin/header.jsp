@@ -38,16 +38,16 @@
     <nav class="nav-menu">
         <ul>
             <li class="nav-menu-item">
-                <h3><a href="contactMessage.jsp">Mensajes <small class="message-number">0</small></a></h3>
+                <h3><a href="../adminMessage">Mensajes <small class="message-number">${messagesNum}</small></a></h3>
             </li>
             <li class="nav-menu-item">
-                <h3><a href="manageUsers.jsp">Gestionar usuarios</a></h3>
+                <h3><a href="../adminUser">Gestionar usuarios</a></h3>
             </li>
             <li class="nav-menu-item">
-                <h3><a href="manageCurses.jsp">Gestionar cursos</a></h3>
+                <h3><a href="../adminCurse">Gestionar cursos</a></h3>
             </li>
             <li class="nav-menu-item">
-                <h3><a href="manageMerchandising.jsp">Gestionar merchandising</a></h3>
+                <h3><a href="../adminMerchandising">Gestionar merchandising</a></h3>
             </li>
         </ul>
     </nav>

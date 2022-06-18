@@ -22,7 +22,9 @@
         <jsp:include page="header.jsp"/>
 
         <section class="principal-section">
-            <!-- Toda la parte del panel de administración -->
+            <div class="first-container-admin">
+                <h2>Bienvenido ${actualUser.name} ${actualUser.surnames}!</h2>
+            </div>
         </section>
 
         <jsp:include page="responsiveMenu.jsp"/>

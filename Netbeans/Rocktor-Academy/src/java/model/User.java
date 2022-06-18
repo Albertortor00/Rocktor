@@ -6,8 +6,7 @@ package model;
  */
 public class User {
 
-    private String name, surnames, email, user, pass, role;
-    private String birthday;
+    private String name, surnames, email, user, pass, birthday, role;
 
     public User() {
     }

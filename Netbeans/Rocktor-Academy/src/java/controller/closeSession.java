@@ -33,7 +33,7 @@ public class closeSession extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             if (request.getParameter("closeSession") != null) {
-                request.getSession().setAttribute("actualUser", null);
+                request.getSession().invalidate();
                 response.sendRedirect("index.jsp");
             }
         }

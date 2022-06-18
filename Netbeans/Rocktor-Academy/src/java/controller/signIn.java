@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.DAO.DAOAdmin;
 import model.DAO.DAOUser;
 import model.User;
 
@@ -48,6 +49,8 @@ public class signIn extends HttpServlet {
                         sesion.setAttribute("actualUser", usuario);
 
                         if (usuario.getRole().equals("Administrador")) {
+                            int messagesNum = new DAOAdmin().getMessagesNum();
+                            sesion.setAttribute("messagesNum", messagesNum);
                             response.sendRedirect("admin/index.jsp");
                         } else {
                             response.sendRedirect("index.jsp");

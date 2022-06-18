@@ -346,10 +346,7 @@ disminuir código, además de evitar redundancia en el mismo
     display: none;
 }
 
-#btn-menu-responsive:checked ~ .modal-menu-responsive {
-    transition: all ease 0.4s;
-    display: flex;
-}
+
 
 .btn-menu {
     display: none;
@@ -406,6 +403,11 @@ disminuir código, además de evitar redundancia en el mismo
 }
 
 @media screen and (max-width: 700px) {
+    #btn-menu-responsive:checked ~ .modal-menu-responsive {
+        transition: all ease 0.4s;
+        display: flex;
+    }
+    
     .img-close-session{
         display: none;
     }
