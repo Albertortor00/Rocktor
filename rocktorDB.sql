@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 14-06-2022 a las 23:52:00
+-- Tiempo de generación: 21-06-2022 a las 01:19:02
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.1.1
 
@@ -50,14 +50,6 @@ CREATE TABLE `Curso` (
   `Precio` decimal(5,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `Curso`
---
-
-INSERT INTO `Curso` (`ID`, `Titulo`, `Descripcion`, `Autor`, `Usuario_Autor`, `Imagen`, `Duracion`, `Precio`) VALUES
-(1, 'Introducción HTML', 'Podrás aprender todo lo que necesitas para comenzar en tu desarrollo web, comenzando por lo más sencillo ¡HTML!\r\nUn lenguaje de etiquetas que llevará la estructura de tu web.', 'Alberto Campos Gómez', 'Albertortor00', 'img/curses/C1.webp', 5, '19.95'),
-(2, 'Iniciación a la programación', 'Adquiere los conocimientos básicos para entender un poco de que se trata la programación, gracias a este curso podrás tener las pautas para dirigirte a la rama que más te guste o motive. No lo pienses más y empieza tu carrera como desarrollador fullstack!!', 'Alberto Campos Gómez', 'Albertortor00', 'img/curses/C2.webp', 2, '5.99');
-
 -- --------------------------------------------------------
 
 --
@@ -84,10 +76,6 @@ CREATE TABLE `Mensaje_Contacto` (
   `Email` varchar(255) NOT NULL,
   `Mensaje` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `Mensaje_Contacto`
---
 
 -- --------------------------------------------------------
 
@@ -163,8 +151,7 @@ CREATE TABLE `Usuario` (
 --
 
 INSERT INTO `Usuario` (`Nombre`, `Apellidos`, `Email`, `Usuario`, `Contraseña`, `Fecha_Nacimiento`, `Rol`) VALUES
-('Administrador', 'del Sistema', 'admin@rocktor.es', 'admin', 'Smokeweed00.', '2022-06-11 02:57:53', 'Administrador'),
-('Alberto', 'Campos Gómez', 'albertortor2000@gmail.com', 'Albertortor00', 'a322000cg', '2000-02-03 00:00:00', 'Alumno');
+('Administrador', 'del Sistema', 'admin@rocktor.es', 'admin', 'admin2022.', '2022-06-21 01:18:42', 'Administrador');
 
 --
 -- Índices para tablas volcadas
@@ -219,19 +206,19 @@ ALTER TABLE `Usuario`
 -- AUTO_INCREMENT de la tabla `Curso`
 --
 ALTER TABLE `Curso`
-  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `Curso_Adquirido`
 --
 ALTER TABLE `Curso_Adquirido`
-  MODIFY `ID_Venta` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID_Venta` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `Mensaje_Contacto`
 --
 ALTER TABLE `Mensaje_Contacto`
-  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `Merchandising_Adquirido`
