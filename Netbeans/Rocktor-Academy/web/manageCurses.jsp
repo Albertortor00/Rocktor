@@ -22,6 +22,11 @@
         <jsp:include page="header.jsp"/>
 
         <section class="curses">
+            <!-- 
+            #########################################################################
+             Actualización futura para la inserción de cursos por parte del profesor
+            #########################################################################
+            -->
             <c:if test="${actualUser.role == 'Profesor'}">
                 <div class="create-new-curse">
                     <form action="createCurse" method="POST" class="form-create-new-curse">
@@ -30,6 +35,7 @@
                     </form>
                 </div>
             </c:if>
+
             <c:choose>
                 <c:when test="${myCurses.size() <= 0 || myCurses == null}">
                     <article class="curse">

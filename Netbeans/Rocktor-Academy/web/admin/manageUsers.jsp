@@ -24,9 +24,9 @@
 
         <section class="principal-section">
             <div class="create-new-curse">
-                <form action="createCurse" method="POST" class="form-create-new-curse">
+                <form action="../createUser" method="POST" class="form-create-new-curse">
                     <h2>Crear un nuevo usuario</h2>
-                    <input type="submit" name="submitNewCurse" value="+"/>
+                    <input type="submit" name="submitCreateUser" value="+"/>
                 </form>
             </div> <br/>
             <table class="manage-table" border="1">
@@ -57,9 +57,9 @@
                         <c:choose>
                             <c:when test="${actualUser.user == u.user}">
                                 <td class="manage-td">
-                                    <form action="../adminUser" method="POST" class="">
+                                    <form action="../createUser" method="POST" class="">
                                         <input type="hidden" value="${u.user}" name="userName"/>
-                                        <button type="submit" name="submitManage" class="button-submit-td">
+                                        <button type="submit" name="submitUpdateUser" class="button-submit-td">
                                             <img src="../img/user.webp" alt="Modificar" class="img-form"/>
                                         </button>
                                     </form>
@@ -67,9 +67,9 @@
                             </c:when>
                             <c:otherwise>
                                 <td class="manage-td">
-                                    <form action="../adminUser" method="POST">
+                                    <form action="../createUser" method="POST">
                                         <input type="hidden" value="${u.user}" name="userName"/>
-                                        <button type="submit" name="submitManage" class="button-submit-td">
+                                        <button type="submit" name="submitUpdateUser" class="button-submit-td">
                                             <img src="../img/manage.webp" alt="Modificar" class="img-form"/>
                                         </button>
                                     </form>

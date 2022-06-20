@@ -23,7 +23,7 @@
 
         <section class="principal-section" style="padding-top: 5vh;">
             <article class="order-article">
-                <form method="POST" action="manageUser" class="form-signUp" enctype="multipart/form-data">
+                <form method="POST" class="form-signUp" enctype="multipart/form-data">
                     <label class="input-form" style="background-color: transparent; padding: 0;">Imagen del curso</label>
                     <input type="file" class="input-form" accept="image/*">
                     <input type="text" class="input-form" placeholder="Título del curso">
@@ -41,7 +41,7 @@
                     <input type="file" class="input-form" accept="*">
                     <input type="file" class="input-form" accept="*">
                     <input type="file" class="input-form" accept="*"><br/>
-                    <input type="submit" name="submitUpdateProfile" value="Crear" class="input-form">
+                    <input type="submit" name="" value="Crear" class="input-form">
                 </form>
             </article>
         </section>

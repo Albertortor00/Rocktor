@@ -4,28 +4,30 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleAdminCurse.css</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleAdminUser.css</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleAdmin.css</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/adminCurse.java</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/adminUser.java</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/model/Curse.java</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/modals.jsp</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/manageUsers.jsp</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleAdminMerchandising.css</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/manageUser.java</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/model/MerchandisingOrder.java</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/contactMessage.jsp</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/confirmResponseMessage.jsp</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/responseMessage.jsp</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/manageMerchandising.jsp</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/header.jsp</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/model/Merchandising.java</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/header.jsp</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleCurses.css</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/model/Email.java</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/model/DAO/DAOAdmin.java</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/model/DAO/DAOCurse.java</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/manageCurses.jsp</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/signIn.java</file>
             <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/adminMerchandising.java</file>
-            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/adminMessage.java</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/model/User.java</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/createUser.jsp</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/signUp.java</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleAdminUser.css</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleAdmin.css</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/createCurse.java</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleAdminMerchandising.css</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/manageCurses.jsp</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/confirmResponseMessage.jsp</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/admin/header.jsp</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/web/css/styleCurses.css</file>
+            <file>file:/Users/albertortor00/Rocktor/Netbeans/Rocktor-Academy/src/java/controller/createUser.java</file>
         </group>
     </open-files>
 </project-private>

@@ -44,7 +44,7 @@ public class signUp extends HttpServlet {
                         && !request.getParameter("userName").equals("")
                         && !request.getParameter("pass").equals("")
                         && !request.getParameter("confirmPass").equals("")
-                        && !request.getParameter("role").equals("")) {
+                        && request.getParameter("role") != null) {
 
                     String name = request.getParameter("name"),
                             surnames = request.getParameter("surnames"),

@@ -13,7 +13,16 @@
     gap:20px;
 }
 
-input[name="submitNewCurse"]{
+.form-create-new-user {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[name="submitCreateUser"]{
     padding: 0px 6px;
     border-radius: 50px;
     font-size: x-large;
@@ -23,8 +32,22 @@ input[name="submitNewCurse"]{
     cursor: pointer;
 }
 
-input[name="submitNewCurse"]:hover{
+.create-submit-button{
+    padding: 5px 20px;
+    width: 100%;
+    font-size: large;
+    background-color: #409640;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+input[name="submitCreateUser"]:hover{
     opacity: 0.8;
+}
+
+.input-form.disabled{
+    background-color: #80808080;
 }
 
 @media screen and (max-width: 1050px) {

@@ -24,6 +24,11 @@
         <jsp:include page="header.jsp"/>
 
         <section class="principal-section">
+            <!-- 
+            #################################################################################
+             Actualización futura para la inserción de productos por parte del administrador
+            #################################################################################
+            -->
             <div class="create-new-curse">
                 <form method="POST" class="form-create-new-curse">
                     <h2>Crear un nuevo producto</h2>
